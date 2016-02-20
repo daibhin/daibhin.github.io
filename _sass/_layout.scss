@@ -8,6 +8,21 @@
     position: relative;
 }
 
+.header-link {
+  color: white;
+  border-bottom: none;
+
+  &:hover {
+    color: #FF752B;
+    border-bottom: none;
+    -webkit-transition: all 150ms ease;
+    -moz-transition: all 150ms ease;
+    -ms-transition: all 150ms ease;
+    -o-transition: all 150ms ease;
+    transition: all 150ms ease;
+  }
+}
+
 .site-title {
     font-size: 26px;
     line-height: 56px;
