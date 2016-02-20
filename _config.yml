@@ -1,0 +1,12 @@
+# Site settings
+title: David Newell
+email: d.newell1@outlook.com
+description: The personal website for David Newell
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://daibhin.github.com" # the base hostname & protocol for your site
+twitter_username: DavidNewell95
+github_username:  daibhin
+linkedin_username:  dnewell1
+
+# Build settings
+markdown: kramdown

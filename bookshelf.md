@@ -1,0 +1,30 @@
+---
+layout: page
+title: Books
+permalink: /bookshelf/
+---
+
+A list of all the books as I read them, bolding indicates my particular favourites:
+
+###2016
+
+* The Lean Startup - _Eric Ries_
+* David and Goliath - _Malcolm Gladwell_
+
+###2015
+
+* Silicon Docks - _Pamela Newenham_
+* A Technique for Producing Ideas - _James Webb Young_
+* How to Win Friends & Influence People - _Dale Carnegie_
+* **Elon Musk** - _Ashlee Vance_
+* **Zero to One** - _Peter Thiel_
+* The $100 Startup - _Chris Guillebeau_
+* **Things A Little Bird Told Me** - _Biz Stone_
+* Outliers - _Malcolm Gladwell_
+* Inferno - _Dan Brown_
+* Killing Floor - _Lee Child_
+* Get Sh*t Done - _Niall Harbison_
+
+<br/>
+
+If there is a book you think I'd enjoy or would like to see on my bookshelf, send me a [note](mailto:d.newell1@outlook.com?subject=📚).
