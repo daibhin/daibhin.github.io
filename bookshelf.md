@@ -6,12 +6,12 @@ permalink: /bookshelf/
 
 A list of all the books as I read them, bolding indicates my particular favourites:
 
-###2016
+<h3>2016</h3>
 
 * The Lean Startup - _Eric Ries_
 * David and Goliath - _Malcolm Gladwell_
 
-###2015
+<h3>2015</h3>
 
 * Silicon Docks - _Pamela Newenham_
 * A Technique for Producing Ideas - _James Webb Young_
