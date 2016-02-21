@@ -11,6 +11,7 @@ Sitting in a café, celebrating my first full piece of work for MiniCorp, Brian 
 It’s probably best that I define my understandings of being scared and being afraid in this context, as I mention them a lot in the following paragraphs and their distinction is not at first obvious:
 
 **Scared:** A fear that exists from not knowing the outcome of trying something new.
+
 **Afraid:** The intangible restriction that stops you from acting on something new/different to overcome being ‘scared’.
 
 As I mentioned in my previous post, I spent my first day trying to understand a single line of code. I was scared. Scared that I didn’t know what I was doing and scared by the greater responsibilities of the circumstances. This fear brought with it a determination and onus to figure it out. When given responsibility you are not offered the opportunity to be afraid, you just have to try. Being scared is always a good thing. It’s what drives us to our best work and achieve what we thought we couldn’t. As long as we are not afraid to try. This feeling returned numerous times throughout the development process, seeing features implemented on other platforms and not having a clue how I’d replicate them. Without my team relying on me and the responsibility given to me, I would’t even have tried. But each time I tried I was surprised by what I could achieve. Each time I was scared, but never afraid.
