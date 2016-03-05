@@ -6,7 +6,7 @@ permalink: /about/
 
 <div class="profile-card">
   <div class="profile-card-photo-holder">
-    <img src="{{site.url}}/assets/profiler.jpg" onmouseover="awesomeFunImage(this)" onmouseout="minusCraic(this)" class="profile-card-photo">
+    <img src="{{site.url}}/assets/profiler.jpg" onclick="awesomeFunImage(this)" class="profile-card-photo">
   </div>
   <p>👋, I'm David.</p>
   <p>I'm a 3rd Year Electronic and Computer Engineering student in National University of Ireland, Galway. I'm currently interning at <a href="https://intercom.io">Intercom</a>.</p>
@@ -23,8 +23,5 @@ permalink: /about/
 <script>
 function awesomeFunImage(x) {
     x.src = "{{site.url}}/assets/cool_profiler.jpg";
-}
-function minusCraic(x) {
-    x.src = "{{site.url}}/assets/profiler.jpg";
 }
 </script>
