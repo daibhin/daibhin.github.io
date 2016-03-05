@@ -1,0 +1,30 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+
+<div class="profile-card">
+  <div class="profile-card-photo-holder">
+    <img src="{{site.url}}/assets/profiler.jpg" onmouseover="awesomeFunImage(this)" onmouseout="minusCraic(this)" class="profile-card-photo">
+  </div>
+  <p>👋, I'm David.</p>
+  <p>I'm a 3rd Year Electronic and Computer Engineering student in National University of Ireland, Galway. I'm currently interning at <a href="https://intercom.io">Intercom</a>.</p>
+
+  <p>I'm interested in building great software, most particularly in the areas of Education, TV & Film and Space; and the ensuing companies/cultures of these pursuits.</p>
+
+  <p>In the summer of 2015, I setup <a href="http://studentsstartup.com">Student Startup</a>, a programme to introduce Irish students to startups. Our weeklong event saw 15 students (based in the offices of <a href="http://startupdublin.com/">Dublin's Commissioner for Startups</a>), meet with Dublin's startup heros, learn from individual mentors and tour startup offices. A 150 person event held in <a href="https://dublin.sciencegallery.com/">Dublin's Science Gallery</a> featured a talk from <a href="https://www.youtube.com/watch?v=hfS4oZrX2Ew">Paul Adams</a> and a panel on what it takes to <a href="https://www.youtube.com/watch?v=INvXNuxCreg">Grow a Startup in Ireland</a>.</p>
+
+  <p>You can find some of my open sourced work (including this site) on <a href="https://github.com/daibhin">GitHub</a>.</p>
+
+  <p>Feel free to contact me on <a href="https://linkedin.com/in/dnewell1">LinkedIn</a>, <a href="https://twitter.com/DavidNewell95">Twitter</a>, or preferably send me a note at <a href="mailto:d.newell1@outlook.com?Subject=👋">d.newell1@outlook.com</a>.</p>
+</div>
+
+<script>
+function awesomeFunImage(x) {
+    x.src = "{{site.url}}/assets/cool-profiler.jpg";
+}
+function minusCraic(x) {
+    x.src = "{{site.url}}/assets/profiler.jpg";
+}
+</script>

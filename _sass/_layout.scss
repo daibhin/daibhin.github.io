@@ -117,6 +117,30 @@
 }
 
 /**
+ * About Page
+ */
+.profile-card-photo-holder {
+  display: table;
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  padding: 8px;
+  margin-top: -100px;
+  border-radius: 50%;
+}
+
+.profile-card-photo {
+  border-radius: 50%;
+}
+
+.profile-card {
+  margin-top: 75px;
+  padding: 50px 15px 15px 15px;
+  background-color: white;
+}
+
+/**
  * Site footer
  */
 footer {
