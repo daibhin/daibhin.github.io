@@ -6,7 +6,7 @@ date:   2016-01-17 16:19:29
 
 > I recently spent some time becoming more familiar with the command line. Here are my notes:
 
-####__General Commands__
+<h4><b>General Commands</b></h4>
 `Ctrl+A` __:__ Go to the beginning of the line
 
 `Ctrl+E`  __:__ Go to the end of the line
@@ -47,7 +47,7 @@ date:   2016-01-17 16:19:29
 
 <br/>
 
-####__Less__
+<h4><b>Less</b></h4>
 `Ctrl+F` or `[spacebar]` __:__ move forward a page
 
 `Ctrl+B` __:__ Move back a page
@@ -60,7 +60,7 @@ date:   2016-01-17 16:19:29
 
 <br/>
 
-####__Ag__
+<h4><b>Ag</b></h4>
 `-Q` __:__ Gets rid regex default
 
 `-l` __:__ Only shows filename (Not line and line number)
@@ -75,7 +75,7 @@ date:   2016-01-17 16:19:29
 
 <br/>
 
-####__cURL__
+<h4><b>cURL</b></h4>
 `-i` __:__ Return headers
 
 `-o` __:__ Download file
@@ -96,7 +96,7 @@ date:   2016-01-17 16:19:29
 
 <br/>
 
-####__find__
+<h4><b>find</b></h4>
 `find [PATH_TO_SEARCH] [OPTIONS_TO_USE] [PATTERN_TO_SEARCH_FOR]`
 
 * Place `\` before pattern wildcards(`.`,`*`) e.g `*` => `\*`
@@ -119,7 +119,7 @@ date:   2016-01-17 16:19:29
 
 <br/>
 
-####__grep__
+<h4><b>grep</b></h4>
 `grep [flags] [term] [filename and extension]` - regex by default, accepts multiple filenames
 
 `-c` __:__ Counts instances
@@ -136,7 +136,7 @@ date:   2016-01-17 16:19:29
 
 <br/>
 
-####__ps__
+<h4><b>ps</b></h4>
 `PID` __:__ Process ID
 
 `TIY` __:__ Controlling terminal
@@ -159,7 +159,7 @@ date:   2016-01-17 16:19:29
 
 <br/>
 
-####__sed__
+<h4><b>sed</b></h4>
 
 `sed “[pattern] / s / [regex search] / [replacement] / [manipulation] / [flags] ” [source file]`
 
@@ -181,7 +181,7 @@ date:   2016-01-17 16:19:29
 
 <br/>
 
-####__sed__ (Archiving)
+<h4><b>sed</b> (Archiving)</h4>
 
 `tar -c [files/directories]` (Can be multiple files/dirs, separated by a space)
 
@@ -211,7 +211,7 @@ date:   2016-01-17 16:19:29
 
 <br/>
 
-####__Other Commands__
+<h4><b>Other Commands</b></h4>
 `cal` (defaults to showing one month)
 
 * `-y` __:__ year
