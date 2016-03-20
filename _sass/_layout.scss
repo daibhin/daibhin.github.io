@@ -214,6 +214,7 @@ footer {
     letter-spacing: -1px;
     line-height: 1;
     margin-top: 15px;
+    text-align: left;
 
     @include media-query($on-laptop) {
         font-size: 36px;

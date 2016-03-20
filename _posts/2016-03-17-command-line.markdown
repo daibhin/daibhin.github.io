@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Lessons in the Command Line"
-date:   2016-01-17 16:19:29
+date:   2016-01-17 12:00:00
 ---
 
 > I recently spent some time becoming more familiar with the command line. Here are my notes:
