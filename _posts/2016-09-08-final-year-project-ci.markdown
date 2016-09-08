@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Final Year: Setting up CI for my Final Year Project using Travis CI and Heroku"
+title:  "Final Year: CI using Travis CI and Heroku"
 date:   2016-08-31 20:00:00
 ---
 
