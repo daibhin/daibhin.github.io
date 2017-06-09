@@ -6,6 +6,10 @@ permalink: /theatre/
 
 A collection of my favourite films (ordered by year I first saw them and not individual release dates):
 
+<h3>2017</h3>
+
+* [Hidden Figures](http://www.imdb.com/title/tt4846340/)
+
 <h3>2016</h3>
 
 * [Joy](http://www.imdb.com/title/tt2446980/)
