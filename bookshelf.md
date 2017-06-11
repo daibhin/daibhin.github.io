@@ -6,7 +6,7 @@ permalink: /bookshelf/
 
 A list of all the books as I read them, bolding indicates my particular favourites:
 
-<h3>2016</h3>
+<h3>2017</h3>
 
 * Founders at Work - _Jessica Livingston_
 
