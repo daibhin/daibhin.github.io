@@ -9,15 +9,16 @@ A list of all the books as I read them, bolding indicates my particular favourit
 <h3>2017</h3>
 
 * Founders at Work - _Jessica Livingston_
+* Intercom on Starting Up - _Intercom_
 
 <h3>2016</h3>
 
 * **It's Not How Good You Are, Its How Good You Want to Be.** - _Paul Arden_
 * The Lean Startup - _Eric Ries_
 * David and Goliath - _Malcolm Gladwell_
-* The Nature of Software Development - _Ron Jeffries_
-* Clean Code - _Robert Cecil Martin_
 * Rework - _David Heinemeier Hansson and Jason Fried_
+* **The Nature of Software Development** - _Ron Jeffries_
+* Clean Code - _Robert Cecil Martin_
 
 <h3>2015</h3>
 
