@@ -232,3 +232,11 @@ pre {
   vertical-align: middle;
   line-height: $banner-height;
 }
+
+/**
+ * General
+ */
+.center {
+  display: block;
+  margin: 0 auto;
+}
