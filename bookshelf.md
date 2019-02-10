@@ -6,10 +6,21 @@ permalink: /bookshelf/
 
 A list of all the books as I read them, bolding indicates my particular favourites:
 
+<h3>2018</h3>
+
+* Computers And Commonsense - _Roger Hunt_
+* **Essays in Love** - _Alain De Botton_
+* Practical Object-Oriented Design in Ruby - _Sandi Metz_
+* Origin - _Dan Brown_
+
 <h3>2017</h3>
 
+* **The Billionaire Who Wasn't** - Conor O'Clery
 * Founders at Work - _Jessica Livingston_
 * Intercom on Starting Up - _Intercom_
+* Hooked - _Nir Eyal_
+* Grouped - _Paul Adams_
+* An Astronaut's Guide to Life on Earth - _Chris Hadfield_
 
 <h3>2016</h3>
 
