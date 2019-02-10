@@ -6,9 +6,15 @@ permalink: /theatre/
 
 A collection of my favourite films (ordered by year I first saw them and not individual release dates):
 
+<h3>2018</h3>
+
+* [Miss Sloane](https://www.imdb.com/title/tt4540710/)
+
 <h3>2017</h3>
 
 * [Hidden Figures](http://www.imdb.com/title/tt4846340/)
+* [Three Billboards Outside Ebbing, Missouri](https://www.imdb.com/title/tt5027774/)
+* [La La Land](https://www.imdb.com/title/tt3783958/)
 
 <h3>2016</h3>
 
@@ -22,6 +28,8 @@ A collection of my favourite films (ordered by year I first saw them and not ind
 * [The Martian](http://www.imdb.com/title/tt3659388/)
 * [Steve Jobs](http://www.imdb.com/title/tt2080374/)
 * [Inside Out](http://www.imdb.com/title/tt2096673/)
+* [Star Wars: Episode VII - The Force Awakens](https://www.imdb.com/title/tt2488496/)
+* [Straight Outta Compton](https://www.imdb.com/title/tt1398426/)
 
 <h3>2014</h3>
 
