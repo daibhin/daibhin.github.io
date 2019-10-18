@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "Testing and shipping at early stage companies"
+date:   2019-09-18 09:51:00
+---
+
+I was recently speaking with a number of seed stage startups and was struck by one thing: no one writes tests.
+
+Most people thought it would be too much effort to get started, some didn't even know automated tests existed. Very few made a concious decision to skip writing them in order to ship product quicker (estimate they shipped 2x the product over the course of the year).
+
+And not writing tests in the early days is ok. Testing is often not worth the added robustness at early stages when the product changes so often. Tests can seem slow in the beginning but once your product gets to a large enough scale they become important lest you will continue to introduce bugs every time you try to ship something new and end up getting into a cycle of reactive work where you spend an increasing amount of time fixing bugs instead of building features.
+
+
+So what alternatives are available to ensure quality in a product without tests? I've heard of some innovative solutions such as adding monitoring/alarms in [Datadog](https://www.datadoghq.com/) as a low cost means of preemptively catching bugs. Some rely on dogfooding their own product and user reports to become aware of bugs - if nothing else it's an excuse for your customers to engage with you in the early days. But by far and away the most common way of testing a product in the early days is through manual QA to make sure everything works. People chose to do this across a variety of local brances or staging environments.
+
+Relying on manual QA as opposed to a CI/CD pipeline shouldn't be considered an immediate win. While it reduces a whole lot of complexity it directly impacts how often you can ship code. While that might seem insignificant, shipping quickly has massive knock-on effects for your product/customer service. Here is a [good explanation](https://www.intercom.com/blog/shipping-is-your-companys-heartbeat/).
+
+Let's look at the three distinct times people ship code:
+
+**Continuously**<br>
+Arguably the best way to ship code. Added benefit that customer can get value immediately, rather than code sitting on a local branch until some arbitrary shipping date. This is underrated but a really strong advantage startups have over other companies. In practice, no early stage team I spoke with did this.
+
+**End of the week/sprint**<br>
+About 50% of teams I talked with did this. It can act as an effective scoping mechanism, by forcing you to only include the necessary if you're running out of time. Some teams found that this led to more bugs as they rushed to finish features as opposed to descoping. Other constraints contributed towards this method e.g. one team had a mobile app and wanted to align themselves with a regular app store review cadence.
+
+**Feature is complete**<br>
+Other 50% of teams chose this approach. It is the natural time for everyone to get together and do some QA/manual testing. It can also be a great source of knowledge sharing/celebration so everyone can get involved in the latest cool addition to the product.
+
+
+Ultimately this is a really long way of saying that there is consensus among people as to the best means of ensuring product quality without the burden of writing tests in the early days of a company.
+
+**My personal take:** I'm not convinced there should even be a hard and fast rule within teams. Some features are easier to bundle together (e.g. when they span multiple codebases) and thus not be shipped until the entire feature is ready, other features are relatively low risk and should be shared asap. I'd personally opt for shipping everything in small chunks where possible. The cognitive overhead of multiple unshipped pieces of work can lead to a large number of bugs. Regular small changes are much easier to review and comprehend (even if not done by a peer) and are usually easier to revert. Why have to revert an entire PR when there is only a small part of the feature broken?
+
+I think it comes down to instilling a conscious mindset in engineers about the cost/benefit analysis of what they're shipping. Maybe a better way to get engineers to think about it is by asking "what are the dangers of me shipping this feature?" or "how easy is it to roll back?", if the opportunity cost is greater than the risk associated then I'd suggest shipping and giving customers immediate value. An impetus to ship sooner is always better, as long as it's adequately tempered.
