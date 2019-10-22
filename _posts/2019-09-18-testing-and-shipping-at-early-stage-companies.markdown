@@ -13,7 +13,7 @@ Most thought it would be too much effort to get started, some didn't even know a
 And not writing tests in the early days is ok. Testing is often not worth the added robustness at early stages when the product changes so often. Tests can seem slow in the beginning but once your product gets to a large enough scale they become important lest you will continue to introduce bugs every time you try to ship something new. And so begins a cycle of reactive work where you spend an increasing amount of time fixing bugs instead of building features.
 
 
-So what alternatives are available to ensure quality in a product without tests? Tools like [Sentry](http://sentry.io/) can be extremely useful to debug issues in realtime. Feature flags make it easy to ship code while still maintaining control over the product users experience. I've heard of some innovative solutions such as adding monitoring/alarms in [Datadog](https://www.datadoghq.com/) as a low cost means of preemptively catching bugs. Some rely on dogfooding their own product and user reports to become aware of bugs - if nothing else it's an excuse for your customers to engage with you in the early days. But by far and away the most common means of testing a product in the early days is through manual QA to make sure everything works. People chose to do this across a variety of local brances or staging environments.
+So what alternatives are available to ensure quality in a product without tests? Tools like [Sentry](http://sentry.io/) can be extremely useful to debug issues in realtime. Feature flags make it easy to ship code while still maintaining control over the users experience. I've heard of some innovative solutions such as adding monitoring/alarms in [Datadog](https://www.datadoghq.com/) as a low cost means of preemptively catching bugs. Some rely on dogfooding their own product and user reports to become aware of bugs - if nothing else it's an excuse for your customers to engage with you in the early days. But by far and away the most common means of testing a product in the early days is through manual QA to make sure everything works. People chose to do this across a variety of local brances or staging environments.
 
 Relying on manual QA as opposed to a CI/CD pipeline shouldn't be considered an immediate win. While it reduces a whole lot of complexity it directly impacts how often you can ship code. While that might seem insignificant, shipping quickly can have massive knock-on effects for your customer service/company as a whole. Here is a [good explanation](https://www.intercom.com/blog/shipping-is-your-companys-heartbeat/).
 
@@ -27,9 +27,9 @@ Arguably the best way to ship code. It comes with the added benefit that custome
 About 50% of teams I talked with did this. It can act as an effective scoping mechanism, forcing you to only include the necessary if you're running out of time. Some teams found that this led to more bugs as they rushed to finish features as opposed to descoping. Other constraints contributed towards this method e.g. one team had a mobile app and wanted to align themselves with a regular app store review cadence.
 
 **Feature is complete**<br>
-Other 50% of teams chose this approach. It is the natural time for everyone to get together and do some QA/manual testing. It can also be a great source of knowledge sharing/celebration so everyone can get involved in the latest cool addition to the product.
+The other 50% of teams chose this approach. It is the natural time for everyone to get together and do some QA/manual testing. It can also be a great source of knowledge sharing/celebration so everyone can get involved in the latest cool addition to the product.
 
-
+<br>
 Ultimately this is a really long way of saying that there is no consensus among people as to the best means of ensuring product quality without the burden of writing tests in the early days.
 <br>
 <br>
