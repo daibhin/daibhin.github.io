@@ -1,0 +1,282 @@
+import Head from "next/head";
+
+<Head>
+  <title>Lessons in the Command Line</title>
+</Head>
+
+> I recently spent some time becoming more familiar with the command line. Here are my notes:
+
+<h4>
+  <b>General Commands</b>
+</h4>
+`Ctrl+A` __:__ Go to the beginning of the line
+
+`Ctrl+E` **:** Go to the end of the line
+
+`Ctrl+U` **:** Deletes everything on a line before the cursor
+
+`Ctrl+K` **:** Deletes everything on a line after the cursor
+
+`Ctrl+R` **:** Recursive search
+
+`!!` **:** Execute previous command (Often used: sudo !!)
+
+`![command]` **:** Returns the last command which begins with the placeholder
+
+`>` **:** Write to file
+
+`> >` **:** Append to file
+
+`head/tail` **:** Show beginning or end of file
+
+`wc` **:** lines words bytes
+
+`ps aux` **:** List processes
+
+`kill -15 [pid]` **:** Kill the process with id 'pid'
+
+`pwd` **:** Print working directory (Current path)
+
+`cd -` **:** Changes to previous directory
+
+`&&` **:** Runs next command only if the previous one succeeded
+
+`;` **:** Colon runs next command regardless of whether the previous one succeeded
+
+`grep -ri` **:** grep (search) recursively, case-insensitive
+
+`ln` **:** Link files (same file, different location)
+
+<br />
+
+<h4>
+  <b>Less</b>
+</h4>
+`Ctrl+F` or `[spacebar]` __:__ move forward a page
+
+`Ctrl+B` **:** Move back a page
+
+`[Arrow keys]` **:** Move by line
+
+`/[search term]` **:** Find in file. Use ’n’ to go to cycle through found instances
+
+`G` / `1G` **:** Go to end/beginning of a file
+
+<br />
+
+<h4>
+  <b>Ag</b>
+</h4>
+`-Q` __:__ Gets rid regex default
+
+`-l` **:** Only shows filename (Not line and line number)
+
+`-i` **:** Case insensitive search
+
+`-G` **:** Define filename/path name to search within
+
+`--ignore-dir=railties/lib` or `--ignore-dir=“*.rb”` **:** Exclude directories/file patterns from a search
+
+`--skip-vcs-ignores` **:** Returns results for files in .gitignore
+
+<br />
+
+<h4>
+  <b>cURL</b>
+</h4>
+`-i` __:__ Return headers
+
+`-o` **:** Download file
+
+`-X` **:** Specify HTTP request type(GET, POST, PUT), passed as an argument
+
+`-d` **:** Adds params in quotations to request body. Can be specified as json, even from a file (using @[json_file_name].json)
+
+`-F` **:** Mimic form data
+
+`-H` **:** Define headers e.g “Accept: application/json”
+
+`-u` **:** HTTP authentication (pass “username:password”)
+
+`-D` / `-b` **:** Save returned cookies to file / Pass saved cookies file to server.
+
+`-c` **:** Can be used to store just the cookies (unlike -D where headers are also stored)
+
+<br />
+
+<h4>
+  <b>find</b>
+</h4>
+`find [PATH_TO_SEARCH] [OPTIONS_TO_USE] [PATTERN_TO_SEARCH_FOR]`
+
+- Place `\` before pattern wildcards(`.`,`*`) e.g `*` => `\*`
+
+`-name` **:** File names
+
+`-path` **:** Path name
+
+`-type` **:** `f` for file, `d` for directory
+
+`-or` **:** replaces implicit ‘AND’ searching with ‘OR’ searching. Use parenthesis (backslashed) to control
+
+`-not` or `\!` **:** Not matching query
+
+`-mtime` and `-mmin` **:** Modified in the last `n` days or minutes (make sure numbers are negative)
+
+`-size` **:** Size greater than value in bytes. `k`, `M` and `G` can be substituted for kilo, mega and giga. Include `+` before number.
+
+`-print -delete` **:** Prints and deletes matching files. Usually appended to end of query
+
+<br />
+
+<h4>
+  <b>grep</b>
+</h4>
+`grep [flags] [term] [filename and extension]` - regex by default, accepts multiple
+filenames
+
+`-c` **:** Counts instances
+
+`-n` **:** Shows line numbers
+
+`-i` **:** case insensitive
+
+`-R` **:** Recursive search through directories
+
+`—include = “[pattern]”` **:** Only searches files that match this pattern
+
+`-v` **:** Invert search
+
+<br />
+
+<h4>
+  <b>ps</b>
+</h4>
+`PID` __:__ Process ID
+
+`TIY` **:** Controlling terminal
+
+`TIME` **:** Cumulative CPU time used by process since starting
+
+`CMD` **:** Name of running command
+
+`u` **:** Extra info columns
+
+`-e` **:** All processes
+
+`-U` **:** Get processes being run by a user e.g root
+
+`-O` **:** provide specific columns to show
+
+`-m` **:** Sort by memory
+
+`-r` **:** sort by CPU usage
+
+<br />
+
+<h4>
+  <b>sed</b>
+</h4>
+
+`sed “[pattern] / s / [regex search] / [replacement] / [manipulation] / [flags] ” [source file]`
+
+- Executes on each line in the source file
+
+- **flags (optional) :** `g` (global replace), `2` (second instance), `i` case insensitive, `p` (prints only modified content to the console), `w` (only writes modified content)
+
+- **pattern (optional) :** Only matches/manipulates lines which match this pattern
+
+- **manipulation (optional) :** `\u` (converts whatever comes after it to uppercase),
+  `&` (represents to regex search),
+  `\l` (lowercase)
+
+`sed “ / [regex search] / d ”` **:** delete matching line (does not alter file, only STDOUT)
+
+`-i` **:** Edit file in place (rather than sending output to STDOUT)
+adding `.tmp` saves second file with files original content
+`-n` **:** Suppress output
+
+<br />
+
+<h4>
+  <b>sed</b> (Archiving)
+</h4>
+
+`tar -c [files/directories]` (Can be multiple files/dirs, separated by a space)
+
+`-c` **:** create a new archive (Written to STDOUT)
+
+`-f` **:** Save to file. File must be passed as first parameter e.g foo.tar
+
+`-v` **:** Outputs archived files after creation
+
+`-t` **:** Print archived files
+
+`-r` **:** append files to an archive (not compatible with compressed archives)
+
+`-u` **:** Update file already in tar file (not compatible with compressed archives)
+
+`-x` **:** Extract files from archive
+
+`-C [folder name]` **:** State where the archive is to be extracted to
+
+`-z` **:** Compress archive. Convention: Add “.gz” to tar file name e.g foo.tar.gz
+
+`-z` **:** Uncompress archive
+
+`-T` **:** Read files/dirs from file
+
+`-` **:** Means the -T file is to be the piped in input
+
+<br />
+
+<h4>
+  <b>Other Commands</b>
+</h4>
+`cal` (defaults to showing one month)
+
+- `-y` **:** year
+
+- `[month] [year]` **:** Both optional. Shows any year e.g 2016. Or any particular month in a given year
+
+<br />
+
+`cat`
+
+- `[No arguments]` **:** Prints out contents or argument file
+
+- `[file 1] [file 2]` **:** Concatenates the two files
+
+- `[file 1] [file 2] > [new file]` **:** Saves concatenated output to new file
+
+<br />
+
+`kill [process ID]` **:** Peacefully shutdown when ready (despite command name)
+
+- `-s SIGKILL` **:** Forcefully kill a process
+
+<br />
+
+`tail [file name]` **:** Prints out last 10 lines
+
+- `-n [number]` **:** Prints out any amount of lines, starting from the end
+
+- `-r` **:** Reverse output order (Does not output top of file, just makes last line of the file the file line of the output)
+
+- `-f` **:** Live file output. Prints new file contents as it arrives
+
+<br />
+
+`tree` **:** Recursively lists directories and files. Can optionally pass directory (defaults to current directory)
+
+- `-L [number]` **:** Defines number of recursive levels
+
+- `-d` **:** Directories only
+
+<br />
+
+`wc`
+
+- `-w` **:** Word count
+
+- `-l` **:** Line count
