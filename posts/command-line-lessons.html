@@ -1,0 +1,186 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><title>Lessons in the Command Line</title><meta name="next-head-count" content="3"/><link rel="preload" href="/personal-site/_next/static/css/d13585b830d0ddc5.css" as="style"/><link rel="stylesheet" href="/personal-site/_next/static/css/d13585b830d0ddc5.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/personal-site/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/personal-site/_next/static/chunks/webpack-54ebfc5766bb1850.js" defer=""></script><script src="/personal-site/_next/static/chunks/framework-fc97f3f1282ce3ed.js" defer=""></script><script src="/personal-site/_next/static/chunks/main-f4ae3437c92c1efc.js" defer=""></script><script src="/personal-site/_next/static/chunks/pages/_app-f55443f2448c8e66.js" defer=""></script><script src="/personal-site/_next/static/chunks/pages/posts/command-line-lessons-518eabcc2e795407.js" defer=""></script><script src="/personal-site/_next/static/5XjfA1Y6gVshClxRW5E3Q/_buildManifest.js" defer=""></script><script src="/personal-site/_next/static/5XjfA1Y6gVshClxRW5E3Q/_ssgManifest.js" defer=""></script><script src="/personal-site/_next/static/5XjfA1Y6gVshClxRW5E3Q/_middlewareManifest.js" defer=""></script></head><body><div id="__next">
+<!-- --><blockquote>
+<!-- --><p>I recently spent some time becoming more familiar with the command line. Here are my notes:</p>
+<!-- --></blockquote>
+<!-- --><h4><b>General Commands</b></h4>
+<!-- --><p><code>Ctrl+A</code> <!-- --><strong>:</strong> Go to the beginning of the line<!-- --></p>
+<!-- --><p><code>Ctrl+E</code> <!-- --><strong>:</strong> Go to the end of the line<!-- --></p>
+<!-- --><p><code>Ctrl+U</code> <!-- --><strong>:</strong> Deletes everything on a line before the cursor<!-- --></p>
+<!-- --><p><code>Ctrl+K</code> <!-- --><strong>:</strong> Deletes everything on a line after the cursor<!-- --></p>
+<!-- --><p><code>Ctrl+R</code> <!-- --><strong>:</strong> Recursive search<!-- --></p>
+<!-- --><p><code>!!</code> <!-- --><strong>:</strong> Execute previous command (Often used: sudo !!)<!-- --></p>
+<!-- --><p><code>![command]</code> <!-- --><strong>:</strong> Returns the last command which begins with the placeholder<!-- --></p>
+<!-- --><p><code>&gt;</code> <!-- --><strong>:</strong> Write to file<!-- --></p>
+<!-- --><p><code>&gt; &gt;</code> <!-- --><strong>:</strong> Append to file<!-- --></p>
+<!-- --><p><code>head/tail</code> <!-- --><strong>:</strong> Show beginning or end of file<!-- --></p>
+<!-- --><p><code>wc</code> <!-- --><strong>:</strong> lines words bytes<!-- --></p>
+<!-- --><p><code>ps aux</code> <!-- --><strong>:</strong> List processes<!-- --></p>
+<!-- --><p><code>kill -15 [pid]</code> <!-- --><strong>:</strong> Kill the process with id &#x27;pid&#x27;<!-- --></p>
+<!-- --><p><code>pwd</code> <!-- --><strong>:</strong> Print working directory (Current path)<!-- --></p>
+<!-- --><p><code>cd -</code> <!-- --><strong>:</strong> Changes to previous directory<!-- --></p>
+<!-- --><p><code>&amp;&amp;</code> <!-- --><strong>:</strong> Runs next command only if the previous one succeeded<!-- --></p>
+<!-- --><p><code>;</code> <!-- --><strong>:</strong> Colon runs next command regardless of whether the previous one succeeded<!-- --></p>
+<!-- --><p><code>grep -ri</code> <!-- --><strong>:</strong> grep (search) recursively, case-insensitive<!-- --></p>
+<!-- --><p><code>ln</code> <!-- --><strong>:</strong> Link files (same file, different location)<!-- --></p>
+<!-- --><br/>
+<!-- --><h4><b>Less</b></h4>
+<!-- --><p><code>Ctrl+F</code> or <!-- --><code>[spacebar]</code> <!-- --><strong>:</strong> move forward a page<!-- --></p>
+<!-- --><p><code>Ctrl+B</code> <!-- --><strong>:</strong> Move back a page<!-- --></p>
+<!-- --><p><code>[Arrow keys]</code> <!-- --><strong>:</strong> Move by line<!-- --></p>
+<!-- --><p><code>/[search term]</code> <!-- --><strong>:</strong> Find in file. Use ’n’ to go to cycle through found instances<!-- --></p>
+<!-- --><p><code>G</code> / <!-- --><code>1G</code> <!-- --><strong>:</strong> Go to end/beginning of a file<!-- --></p>
+<!-- --><br/>
+<!-- --><h4><b>Ag</b></h4>
+<!-- --><p><code>-Q</code> <!-- --><strong>:</strong> Gets rid regex default<!-- --></p>
+<!-- --><p><code>-l</code> <!-- --><strong>:</strong> Only shows filename (Not line and line number)<!-- --></p>
+<!-- --><p><code>-i</code> <!-- --><strong>:</strong> Case insensitive search<!-- --></p>
+<!-- --><p><code>-G</code> <!-- --><strong>:</strong> Define filename/path name to search within<!-- --></p>
+<!-- --><p><code>--ignore-dir=railties/lib</code> or <!-- --><code>--ignore-dir=“*.rb”</code> <!-- --><strong>:</strong> Exclude directories/file patterns from a search<!-- --></p>
+<!-- --><p><code>--skip-vcs-ignores</code> <!-- --><strong>:</strong> Returns results for files in .gitignore<!-- --></p>
+<!-- --><br/>
+<!-- --><h4><b>cURL</b></h4>
+<!-- --><p><code>-i</code> <!-- --><strong>:</strong> Return headers<!-- --></p>
+<!-- --><p><code>-o</code> <!-- --><strong>:</strong> Download file<!-- --></p>
+<!-- --><p><code>-X</code> <!-- --><strong>:</strong> Specify HTTP request type(GET, POST, PUT), passed as an argument<!-- --></p>
+<!-- --><p><code>-d</code> <!-- --><strong>:</strong> Adds params in quotations to request body. Can be specified as json, even from a file (using @[json_file_name].json)<!-- --></p>
+<!-- --><p><code>-F</code> <!-- --><strong>:</strong> Mimic form data<!-- --></p>
+<!-- --><p><code>-H</code> <!-- --><strong>:</strong> Define headers e.g “Accept: application/json”<!-- --></p>
+<!-- --><p><code>-u</code> <!-- --><strong>:</strong> HTTP authentication (pass “username:password”)<!-- --></p>
+<!-- --><p><code>-D</code> / <!-- --><code>-b</code> <!-- --><strong>:</strong> Save returned cookies to file / Pass saved cookies file to server.<!-- --></p>
+<!-- --><p><code>-c</code> <!-- --><strong>:</strong> Can be used to store just the cookies (unlike -D where headers are also stored)<!-- --></p>
+<!-- --><br/>
+<!-- --><h4><b>find</b></h4>
+<!-- --><p><code>find [PATH_TO_SEARCH] [OPTIONS_TO_USE] [PATTERN_TO_SEARCH_FOR]</code></p>
+<!-- --><ul>
+<!-- --><li>Place <!-- --><code>\</code> before pattern wildcards(<!-- --><code>.</code>,<!-- --><code>*</code>) e.g <!-- --><code>*</code> =&gt; <!-- --><code>\*</code></li>
+<!-- --></ul>
+<!-- --><p><code>-name</code> <!-- --><strong>:</strong> File names<!-- --></p>
+<!-- --><p><code>-path</code> <!-- --><strong>:</strong> Path name<!-- --></p>
+<!-- --><p><code>-type</code> <!-- --><strong>:</strong> <!-- --><code>f</code> for file, <!-- --><code>d</code> for directory<!-- --></p>
+<!-- --><p><code>-or</code> <!-- --><strong>:</strong> replaces implicit ‘AND’ searching with ‘OR’ searching. Use parenthesis (backslashed) to control<!-- --></p>
+<!-- --><p><code>-not</code> or <!-- --><code>\!</code> <!-- --><strong>:</strong> Not matching query<!-- --></p>
+<!-- --><p><code>-mtime</code> and <!-- --><code>-mmin</code> <!-- --><strong>:</strong> Modified in the last <!-- --><code>n</code> days or minutes (make sure numbers are negative)<!-- --></p>
+<!-- --><p><code>-size</code> <!-- --><strong>:</strong> Size greater than value in bytes. <!-- --><code>k</code>, <!-- --><code>M</code> and <!-- --><code>G</code> can be substituted for kilo, mega and giga. Include <!-- --><code>+</code> before number.<!-- --></p>
+<!-- --><p><code>-print -delete</code> <!-- --><strong>:</strong> Prints and deletes matching files. Usually appended to end of query<!-- --></p>
+<!-- --><br/>
+<!-- --><h4><b>grep</b></h4>
+<!-- --><p><code>grep [flags] [term] [filename and extension]</code> - regex by default, accepts multiple
+filenames<!-- --></p>
+<!-- --><p><code>-c</code> <!-- --><strong>:</strong> Counts instances<!-- --></p>
+<!-- --><p><code>-n</code> <!-- --><strong>:</strong> Shows line numbers<!-- --></p>
+<!-- --><p><code>-i</code> <!-- --><strong>:</strong> case insensitive<!-- --></p>
+<!-- --><p><code>-R</code> <!-- --><strong>:</strong> Recursive search through directories<!-- --></p>
+<!-- --><p><code>—include = “[pattern]”</code> <!-- --><strong>:</strong> Only searches files that match this pattern<!-- --></p>
+<!-- --><p><code>-v</code> <!-- --><strong>:</strong> Invert search<!-- --></p>
+<!-- --><br/>
+<!-- --><h4><b>ps</b></h4>
+<!-- --><p><code>PID</code> <!-- --><strong>:</strong> Process ID<!-- --></p>
+<!-- --><p><code>TIY</code> <!-- --><strong>:</strong> Controlling terminal<!-- --></p>
+<!-- --><p><code>TIME</code> <!-- --><strong>:</strong> Cumulative CPU time used by process since starting<!-- --></p>
+<!-- --><p><code>CMD</code> <!-- --><strong>:</strong> Name of running command<!-- --></p>
+<!-- --><p><code>u</code> <!-- --><strong>:</strong> Extra info columns<!-- --></p>
+<!-- --><p><code>-e</code> <!-- --><strong>:</strong> All processes<!-- --></p>
+<!-- --><p><code>-U</code> <!-- --><strong>:</strong> Get processes being run by a user e.g root<!-- --></p>
+<!-- --><p><code>-O</code> <!-- --><strong>:</strong> provide specific columns to show<!-- --></p>
+<!-- --><p><code>-m</code> <!-- --><strong>:</strong> Sort by memory<!-- --></p>
+<!-- --><p><code>-r</code> <!-- --><strong>:</strong> sort by CPU usage<!-- --></p>
+<!-- --><br/>
+<!-- --><h4><b>sed</b></h4>
+<!-- --><p><code>sed “[pattern] / s / [regex search] / [replacement] / [manipulation] / [flags] ” [source file]</code></p>
+<!-- --><ul>
+<!-- --><li>
+<!-- --><p>Executes on each line in the source file</p>
+<!-- --></li>
+<!-- --><li>
+<!-- --><p><strong>flags (optional) :</strong> <!-- --><code>g</code> (global replace), <!-- --><code>2</code> (second instance), <!-- --><code>i</code> case insensitive, <!-- --><code>p</code> (prints only modified content to the console), <!-- --><code>w</code> (only writes modified content)<!-- --></p>
+<!-- --></li>
+<!-- --><li>
+<!-- --><p><strong>pattern (optional) :</strong> Only matches/manipulates lines which match this pattern<!-- --></p>
+<!-- --></li>
+<!-- --><li>
+<!-- --><p><strong>manipulation (optional) :</strong> <!-- --><code>\u</code> (converts whatever comes after it to uppercase),
+<!-- --><code>&amp;</code> (represents to regex search),
+<!-- --><code>\l</code> (lowercase)<!-- --></p>
+<!-- --></li>
+<!-- --></ul>
+<!-- --><p><code>sed “ / [regex search] / d ”</code> <!-- --><strong>:</strong> delete matching line (does not alter file, only STDOUT)<!-- --></p>
+<!-- --><p><code>-i</code> <!-- --><strong>:</strong> Edit file in place (rather than sending output to STDOUT)
+adding <!-- --><code>.tmp</code> saves second file with files original content
+<!-- --><code>-n</code> <!-- --><strong>:</strong> Suppress output<!-- --></p>
+<!-- --><br/>
+<!-- --><h4><p><b>sed</b> (Archiving)<!-- --></p></h4>
+<!-- --><p><code>tar -c [files/directories]</code> (Can be multiple files/dirs, separated by a space)<!-- --></p>
+<!-- --><p><code>-c</code> <!-- --><strong>:</strong> create a new archive (Written to STDOUT)<!-- --></p>
+<!-- --><p><code>-f</code> <!-- --><strong>:</strong> Save to file. File must be passed as first parameter e.g foo.tar<!-- --></p>
+<!-- --><p><code>-v</code> <!-- --><strong>:</strong> Outputs archived files after creation<!-- --></p>
+<!-- --><p><code>-t</code> <!-- --><strong>:</strong> Print archived files<!-- --></p>
+<!-- --><p><code>-r</code> <!-- --><strong>:</strong> append files to an archive (not compatible with compressed archives)<!-- --></p>
+<!-- --><p><code>-u</code> <!-- --><strong>:</strong> Update file already in tar file (not compatible with compressed archives)<!-- --></p>
+<!-- --><p><code>-x</code> <!-- --><strong>:</strong> Extract files from archive<!-- --></p>
+<!-- --><p><code>-C [folder name]</code> <!-- --><strong>:</strong> State where the archive is to be extracted to<!-- --></p>
+<!-- --><p><code>-z</code> <!-- --><strong>:</strong> Compress archive. Convention: Add “.gz” to tar file name e.g foo.tar.gz<!-- --></p>
+<!-- --><p><code>-z</code> <!-- --><strong>:</strong> Uncompress archive<!-- --></p>
+<!-- --><p><code>-T</code> <!-- --><strong>:</strong> Read files/dirs from file<!-- --></p>
+<!-- --><p><code>-</code> <!-- --><strong>:</strong> Means the -T file is to be the piped in input<!-- --></p>
+<!-- --><br/>
+<!-- --><h4><b>Other Commands</b></h4>
+<!-- --><p><code>cal</code> (defaults to showing one month)<!-- --></p>
+<!-- --><ul>
+<!-- --><li>
+<!-- --><p><code>-y</code> <!-- --><strong>:</strong> year<!-- --></p>
+<!-- --></li>
+<!-- --><li>
+<!-- --><p><code>[month] [year]</code> <!-- --><strong>:</strong> Both optional. Shows any year e.g 2016. Or any particular month in a given year<!-- --></p>
+<!-- --></li>
+<!-- --></ul>
+<!-- --><br/>
+<!-- --><p><code>cat</code></p>
+<!-- --><ul>
+<!-- --><li>
+<!-- --><p><code>[No arguments]</code> <!-- --><strong>:</strong> Prints out contents or argument file<!-- --></p>
+<!-- --></li>
+<!-- --><li>
+<!-- --><p><code>[file 1] [file 2]</code> <!-- --><strong>:</strong> Concatenates the two files<!-- --></p>
+<!-- --></li>
+<!-- --><li>
+<!-- --><p><code>[file 1] [file 2] &gt; [new file]</code> <!-- --><strong>:</strong> Saves concatenated output to new file<!-- --></p>
+<!-- --></li>
+<!-- --></ul>
+<!-- --><br/>
+<!-- --><p><code>kill [process ID]</code> <!-- --><strong>:</strong> Peacefully shutdown when ready (despite command name)<!-- --></p>
+<!-- --><ul>
+<!-- --><li><code>-s SIGKILL</code> <!-- --><strong>:</strong> Forcefully kill a process<!-- --></li>
+<!-- --></ul>
+<!-- --><br/>
+<!-- --><p><code>tail [file name]</code> <!-- --><strong>:</strong> Prints out last 10 lines<!-- --></p>
+<!-- --><ul>
+<!-- --><li>
+<!-- --><p><code>-n [number]</code> <!-- --><strong>:</strong> Prints out any amount of lines, starting from the end<!-- --></p>
+<!-- --></li>
+<!-- --><li>
+<!-- --><p><code>-r</code> <!-- --><strong>:</strong> Reverse output order (Does not output top of file, just makes last line of the file the file line of the output)<!-- --></p>
+<!-- --></li>
+<!-- --><li>
+<!-- --><p><code>-f</code> <!-- --><strong>:</strong> Live file output. Prints new file contents as it arrives<!-- --></p>
+<!-- --></li>
+<!-- --></ul>
+<!-- --><br/>
+<!-- --><p><code>tree</code> <!-- --><strong>:</strong> Recursively lists directories and files. Can optionally pass directory (defaults to current directory)<!-- --></p>
+<!-- --><ul>
+<!-- --><li>
+<!-- --><p><code>-L [number]</code> <!-- --><strong>:</strong> Defines number of recursive levels<!-- --></p>
+<!-- --></li>
+<!-- --><li>
+<!-- --><p><code>-d</code> <!-- --><strong>:</strong> Directories only<!-- --></p>
+<!-- --></li>
+<!-- --></ul>
+<!-- --><br/>
+<!-- --><p><code>wc</code></p>
+<!-- --><ul>
+<!-- --><li>
+<!-- --><p><code>-w</code> <!-- --><strong>:</strong> Word count<!-- --></p>
+<!-- --></li>
+<!-- --><li>
+<!-- --><p><code>-l</code> <!-- --><strong>:</strong> Line count<!-- --></p>
+<!-- --></li>
+<!-- --></ul></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/posts/command-line-lessons","query":{},"buildId":"5XjfA1Y6gVshClxRW5E3Q","assetPrefix":"/personal-site","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
